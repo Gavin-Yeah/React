@@ -1,47 +1,112 @@
-import React,{Component} from 'react'
-import Add from "./components/add/Add";
-import List from "./components/list/List";
-export default class App extends Component{
-    state = {
-        comments:[
-        ]
-    }
+import React, {Component} from 'react'
+import axios from 'axios'
 
-    addComment = (commentObj)=> {
-        let comments = [...this.state.comments]
-        comments.unshift(commentObj);
-        this.setState({comments})
+export default class App extends Component {
+    state = {
+        isLoading: true,
+        repoName: '',
+        repoUrl: '',
+        errMsg: ''
+
     }
-    deleteComment = (userId)=> {
-        let comments = [...this.state.comments]
-        comments.forEach((item,index)=>{
-            if(item.userId===userId){
-                comments.splice(index,1)
-            }
-        })
-        this.setState({comments})
+    keyWord = 'v';
+
+    async componentDidMount() {
+
+        const url = `https://api.github.com/search/repositories?q=${this.keyWord}&sort=stars`
+        // try{
+        //     let response = await axios.get(url);
+        //     let repoInfo = response.data.items[0];
+        //     console.log(response)
+        //     this.setState({
+        //
+        //         isLoading: false,
+        //         repoName: repoInfo.name,
+        //         repoUrl: repoInfo.html_url,
+        //         errMsg:''
+        //     })
+        // }catch (e) {
+        //     this.setState({
+        //
+        //         isLoading: false,
+        //         repoName: "",
+        //         repoUrl: "",
+        //         errMsg:e.toString()
+        //     })
+        //
+        // }
+
+
+        //    await axios.get(url).then((response)=>{
+        //        let repoInfo = response.data.items[0];
+        //            this.setState({
+        //                isLoading: false,
+        //                repoName: repoInfo.name,
+        //                repoUrl: repoInfo.html_url,
+        //                errMsg:''
+        //            })
+        //    }).catch((err)=>[
+        //            this.setState({
+        //
+        //                isLoading: false,
+        //                repoName: "",
+        //                repoUrl: "",
+        //                errMsg:err.toString()
+        //            })
+        //    ])
+
+
+        //fetch
+
+        fetch(url)
+            .then(result => {
+                //if the server connected, succeed, but if the routing failed, it still succeed.
+                // console.log(result)
+
+
+                if (result.ok) {
+                    return result.json;
+                } else {
+                    return Promise.reject('resource does not exist');
+                }
+                return result.json();
+            })
+            .then(function (data) {
+                let repoInfo = data.items[0];
+                this.setState({
+                    isLoading: false,
+                    repoName: repoInfo.name,
+                    repoUrl: repoInfo.html_url,
+                    errMsg: ''
+                })
+            })
+            .catch(function (err) {
+                console.log(err.message)
+                this.setState({
+
+                    isLoading: false,
+                    repoName: "",
+                    repoUrl: "",
+                    errMsg: err.toString()
+                })
+
+            })
+
     }
 
     render() {
-        let {comments} = this.state
-        return(
-            <div id="app">
-                <div>
-                    <header className="site-header jumbotron">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-xs-12">
-                                    <h1>请发表对React的评论</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                    <div className="container">
-                    <Add addComment={this.addComment}/>
-                    <List comments={comments} deleteComment={this.deleteComment}/>
-                    </div>
-                </div>
-            </div>
-        )
+        let {repoName, repoUrl, errMsg, isLoading} = this.state
+        if (isLoading) {
+            return <h3>loading...</h3>
+        } else if (errMsg) {
+            return <h3>{errMsg}</h3>
+        } else {
+            return (
+                <h2>The most starred repo with name of {this.keyWord} in all repos is <a href={repoUrl}>{repoName}</a>
+                </h2>
+            )
+        }
+
     }
+
 }
