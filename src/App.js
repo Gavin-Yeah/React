@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react'
+import Add from "./components/add/Add";
+import List from "./components/list/List";
+export default class App extends Component{
+    state = {
+        comments:[
+        ]
+    }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    addComment = (commentObj)=> {
+        let comments = [...this.state.comments]
+        comments.unshift(commentObj);
+        this.setState({comments})
+    }
+    deleteComment = (userId)=> {
+        let comments = [...this.state.comments]
+        comments.forEach((item,index)=>{
+            if(item.userId===userId){
+                comments.splice(index,1)
+            }
+        })
+        this.setState({comments})
+    }
+
+    render() {
+        let {comments} = this.state
+        return(
+            <div id="app">
+                <div>
+                    <header className="site-header jumbotron">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-xs-12">
+                                    <h1>请发表对React的评论</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div className="container">
+                    <Add addComment={this.addComment}/>
+                    <List comments={comments} deleteComment={this.deleteComment}/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
-
-export default App;
