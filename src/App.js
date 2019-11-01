@@ -3,27 +3,21 @@ import Search from "./components/search/Search";
 import List from "./components/list/List";
 class App extends Component {
     state = {
-        isFirst:true,
-        isLoading: false,
-        users:[],
-        errMsg:'',
+
+        keyWord:''// keyWord is used by List
 
     }
-    updateAppState = ({isFirst, isLoading,users,errMsg})=>{
-        this.setState({
-            isFirst,
-            isLoading,
-            users,
-            errMsg,
-        })
+    setKeyWord = (keyWord)=>{
+        this.setState({keyWord});
     }
+
 
     render() {
         return (
             <div id="app">
                 <div className="container">
-                    <Search updateAppState={this.updateAppState}/>
-                    <List appState={this.state}/>
+                    <Search setKeyWord={this.setKeyWord}/>
+                    <List keyWord={this.state.keyWord}/>
                 </div>
             </div>
         );
