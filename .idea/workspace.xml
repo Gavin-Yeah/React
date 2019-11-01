@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f50ba445-52e7-40a8-a74e-8301f353f730" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/item/Item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/item/Item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/list/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/add/Add.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item/Item.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item/Item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list/List.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list/List.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="markdown" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,7 +37,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/item" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,17 +47,18 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/item" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/list" />
       <recent name="$PROJECT_DIR$/src/components/item" />
       <recent name="$PROJECT_DIR$/src/components/add" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/src/components/" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572505754149</updated>
       <workItem from="1572505755357" duration="11439000" />
-      <workItem from="1572551255097" duration="7806000" />
+      <workItem from="1572551255097" duration="12143000" />
     </task>
     <servers />
   </component>
