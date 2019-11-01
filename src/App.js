@@ -3,15 +3,11 @@ import Search from "./components/search/Search";
 import List from "./components/list/List";
 class App extends Component {
     state = {
-        // isFirst:true,
-        // isLoading: false,
-        // users:[],
-        // errMsg:'',
-        keyWord:''// keyWord is used by List
+        isFirst:true,
+        isLoading: false,
+        users:[],
+        errMsg:'',
 
-    }
-    setKeyword = (keyWord)=>{
-        this.setState({keyWord});
     }
     updateAppState = ({isFirst, isLoading,users,errMsg})=>{
         this.setState({
