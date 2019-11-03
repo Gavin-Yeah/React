@@ -1,13 +1,67 @@
 import React, {Component} from 'react';
-
+import axios from "axios";
+import PubSub from 'pubsub-js'
 class Search extends Component {
     keyWordRef = React.createRef();
+
+
+
+
+
     search = ()=>{
-        let {setKeyWord} = this.props
+
         //1.get input
         let keyWord = this.keyWordRef.current.value.trim();
-        //pass keyword to list
-        setKeyWord(keyWord)
+        //publish msg, let list update state
+        PubSub.publish('updateListState',
+            {
+                isFirst: false,
+                isLoading: true,
+                users:[],
+                errMsg:''
+            })
+        const url =  `https://api.github.com/search/users?q=${keyWord}`
+
+             axios.get(url).then((response)=>{
+                 let users = response.data.items.map((item,index)=>{
+                     return {
+                         avatar_url: item.avatar_url,
+                         html_url: item.html_url,
+                         login: item.login
+
+                     }
+                 });
+
+                 PubSub.publish('updateListState',
+                     {
+                         isFirst: false,
+                         isLoading: false,
+                         users:users,
+                         errMsg:''
+                     })
+
+
+                 }
+
+
+
+
+             ).catch((e)=>{
+                PubSub.publish('updateListState',
+                    {
+                        isFirst: false,
+                        isLoading: false,
+                        users:[],
+                        errMsg:e.toString()
+                    })
+            })
+
+
+
+
+
+
+
         //clear input
         this.keyWordRef.current.value='';
     }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Item from "../item/Item";
 import axios from 'axios'
+import PubSub from 'pubsub-js'
 class List extends Component {
 
     state = {
@@ -10,42 +11,12 @@ class List extends Component {
         errorMsg: ''
     }
 
-    async UNSAFE_componentWillReceiveProps({keyWord}) {
-        this.setState({
-            isFirst: false,
-            isLoading: true,
-            users:[],
-            errMsg:'',
+ componentDidMount() {
+        PubSub.subscribe('updateListState',(msg,newState)=>{
+           this.setState({...newState})
+
         })
-        const url =  `https://api.github.com/search/users?q=${keyWord}`
-       try{
-            let response = await axios.get(url);
-            let users = response.data.items.map((item,index)=>{
-                return {
-                    avatar_url: item.avatar_url,
-                    html_url: item.html_url,
-                    login: item.login
-
-                }
-           })
-           this.setState({
-               isFirst: false,
-               isLoading: false,
-               users,
-               errMsg:'',
-           })
-       }catch (e) {
-           this.setState({
-               isFirst: false,
-               isLoading: false,
-               users:[],
-               errMsg:e.toString(),
-           })
-       }
-
-
-
-    }
+ }
 
     render() {
         let {isFirst, isLoading, users, errMsg} = this.state
