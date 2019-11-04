@@ -2,13 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f50ba445-52e7-40a8-a74e-8301f353f730" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page(嵌套)/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page(嵌套)/home-message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page(嵌套)/home-news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static page (irrelevant)/route-page/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Item.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Item.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list/List.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/Demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/Demo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_01_一个简单的应用/logo.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +40,7 @@
       <list>
         <option value="CSS File" />
         <option value="markdown" />
+        <option value="JSX File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -38,28 +58,32 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/item" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static page (irrelevant)" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/item" />
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/list" />
       <recent name="$PROJECT_DIR$/src/components/item" />
       <recent name="$PROJECT_DIR$/src/components/add" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/src/components/" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/static page (irrelevant)" />
+      <recent name="$PROJECT_DIR$/src/components/item" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,5 +145,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/index.js</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
