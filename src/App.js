@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {NavLink,Link,Route,Redirect, Switch} from 'react-router-dom'
 import About from "./pages/About";
 import Home from "./pages/Home";
-
+import MyNavLink from "./components/MyNavLink"
 class App extends Component {
 
 
@@ -24,8 +24,8 @@ class App extends Component {
                             <a className="list-group-item active" href="./home.html">Home</a>*/}
 
                         {/*    用react中的路由_______-路由切换*/}
-                            <NavLink className="list-group-item" activeClassName="demo" to='/about'>About</NavLink>
-                            <NavLink className="list-group-item" activeClassName="demo" to='/home' >Home</NavLink>
+                            <MyNavLink className="list-group-item" activeClassName="demo" to='/about'>About</MyNavLink>
+                            <MyNavLink className="list-group-item" activeClassName="demo" to='/home' >Home</MyNavLink>
                         </div>
                     </div>
                     <div className="col-xs-6">

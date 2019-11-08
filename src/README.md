@@ -17,3 +17,5 @@ npm install -save react-router-dom
   ...
            <Switch>
  ```
+ use of switch:
+ if it finds the route, it will immediately return that route and will not continue search 
