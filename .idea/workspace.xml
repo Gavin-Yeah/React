@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f50ba445-52e7-40a8-a74e-8301f353f730" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MyNavLink.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/HomeMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/HomeMessageDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/HomeNews.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/comment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/comment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyNavLink.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomeMessage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomeMessageDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomeNews.jsx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +115,7 @@
       <workItem from="1572551255097" duration="20891000" />
       <workItem from="1572684620736" duration="4000" />
       <workItem from="1572767481048" duration="4332000" />
-      <workItem from="1573161015166" duration="11749000" />
+      <workItem from="1573161015166" duration="15663000" />
     </task>
     <servers />
   </component>
